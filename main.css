@@ -1,0 +1,369 @@
+                * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #E4DDD7;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+        }
+
+        nav{
+            position:sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .nawigacja {
+            background-color: #706851;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 40px;
+            flex-wrap: wrap;
+        }
+
+        .nawigacja img {
+            height: 80px;
+        }
+
+        .links a {
+            text-decoration: none;
+            margin-left: 2rem;
+            color: #FEFEFE;
+            font-size: 1.4rem;
+            transition: color 0.3s ease;
+        }
+
+        .links a:hover {
+            color: #d4d4d4;
+        }
+
+        header {
+            padding: 40px;
+            background-color: #E4DDD7;
+            font-size: xx-large;
+        }
+
+        header video {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+
+        .about {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            max-width: 900px;
+            margin: auto;
+            font-size: large;
+        }
+
+        .about video {
+            max-width: 100%;
+            border-radius: 10px;
+        }
+
+        .about-text {
+            flex: 1;
+            min-width: 250px;
+        }
+
+        .about-text h2 {
+            margin-bottom: 1rem;
+        }
+
+        main {
+            padding: 40px;
+            background-color: #706851;
+            color: white;
+            font-size: large;
+        }
+
+        .contener-info {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .contener-info .left,
+        .contener-info .right {
+            background: #E4DDD7;
+            color: #333;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+.contener {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.contener img {
+    height: 400px;
+    border-radius: 15px;
+    max-width: 100%;
+    object-fit: cover;
+}
+
+.item {
+    background-color: #E4DDD7;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 400px;
+    max-width: 100%;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+/*---------------------------------------------------------------------------------------------*/
+.zakup {
+    background-color: #E4DDD7;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+}
+
+.box-zakup {
+    background-color: #706851;
+    border-radius: 15px;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 0.6fr 2fr;
+    gap: 1rem;
+    width: 100%;
+    max-width: 1100px;
+}
+
+/* Jasnoniebieski formularz */
+.form-zakup {
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.form-zakup form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.form-zakup input,
+.form-zakup select {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.form-zakup input[type="submit"] {
+    background-color: #E4DDD7;
+    color: #333;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-zakup input[type="submit"]:hover {
+    background-color: #d4d4d4;
+}
+
+/* Niebieskie ceny */
+.ceny {
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cena {
+    background: #E4DDD7;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Ciemnoniebieskie zdjęcie + opis (czarny blok) */
+.slider-wrapper {
+
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.slider-caption {
+    position: absolute;
+    bottom: 20px;
+    background-color: #E4DDD7;
+    color: black;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/*---------------------------------------------------------------------------------------------*/
+
+        footer {
+            padding: 20px;
+            background-color: #706851;
+            color: white;
+            text-align: center;
+        }
+
+                .fade-in {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s forwards;
+        }
+
+        .fade-in:nth-child(1) { animation-delay: 0.2s; }
+        .fade-in:nth-child(2) { animation-delay: 0.4s; }
+        .fade-in:nth-child(3) { animation-delay: 0.6s; }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+/* Media queries */
+
+@media (max-width: 1024px) {
+    .box-zakup {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto;
+        gap: 1.5rem;
+    }
+
+    /* Slider pod formularzem i cenami */
+    .slider-wrapper {
+        grid-column: 1 / -1;
+        width: 100%;
+        justify-self: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .nawigacja {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+    }
+
+    .links a {
+        display: block;
+        margin: 10px 0;
+        font-size: 1.2rem;
+    }
+
+    .about {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .contener-info {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .contener {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item, .contener img {
+        width: 90%;
+        height: auto;
+    }
+
+    .form-zakup,
+    .ceny {
+        text-align: center;
+        align-items: center;
+    }
+
+    form {
+        width: 100%;
+    }
+
+    .box-zakup {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1.5rem;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .slider-wrapper {
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .nawigacja img {
+        height: 60px;
+    }
+
+    header {
+        font-size: large;
+        padding: 20px;
+    }
+
+    .zakup {
+        padding: 20px;
+        font-size: large;
+    }
+
+    .cena {
+        font-size: 0.9rem;
+        padding: 8px;
+    }
+
+    .slider-image {
+        max-width: 80%;
+    }
+
+    .about-text {
+        padding: 10px;
+    }
+
+    .about-text h2 {
+        font-size: 1.4rem;
+    }
+
+    .about-text p {
+        font-size: 1rem;
+    }
+
+    .links a {
+        font-size: 1rem;
+    }
+
+    .item {
+        font-size: 0.9rem;
+    }
+}
